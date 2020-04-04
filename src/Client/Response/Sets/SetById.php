@@ -1,10 +1,11 @@
 <?php
 
-namespace Viktoras\Scryfall\Client\Response;
+namespace Viktoras\Scryfall\Client\Response\Sets;
 
+use Viktoras\Scryfall\Client\Response\AbstractResponse;
 use Viktoras\Scryfall\Entities\Set;
 
-class SetByCode extends AbstractResponse
+class SetById extends AbstractResponse
 {
     /**
      * @var Set

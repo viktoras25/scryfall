@@ -4,6 +4,6 @@ namespace Viktoras\Scryfall\Enums;
 
 interface Boolean
 {
-    const TRUE  = 'true';
-    const FALSE = 'false';
+    public const TRUE  = 'true';
+    public const FALSE = 'false';
 }

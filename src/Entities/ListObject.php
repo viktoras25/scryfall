@@ -2,6 +2,8 @@
 
 namespace Viktoras\Scryfall\Entities;
 
+use Viktoras\Scryfall\Enums\Objects;
+
 class ListObject extends AbstractObject
 {
     /**
@@ -34,35 +36,7 @@ class ListObject extends AbstractObject
      */
     protected function acceptsObject(): string
     {
-        return 'list';
-    }
-
-    /**
-     * @param array $data
-     *
-     * @return ObjectInterface
-     */
-    public static function fromArray(array $data): ObjectInterface
-    {
-        $instance = new static();
-
-        if (!empty($data['next_page'])) {
-            $instance->setNextPage($data['next_page']);
-        }
-
-        if (!empty($data['data'])) {
-            $instance->setData($data['data']);
-        }
-
-        if (!empty($data['total_cards'])) {
-            $instance->setTotalCards($data['total_cards']);
-        }
-
-        if (!empty($data['warnings'])) {
-            $instance->setTotalCards($data['warnings']);
-        }
-
-        return $instance;
+        return Objects::LIST;
     }
 
     /**
@@ -100,7 +74,7 @@ class ListObject extends AbstractObject
     /**
      * @return bool
      */
-    public function isHasMore()
+    public function hasMore()
     {
         return $this->hasMore;
     }

@@ -87,7 +87,6 @@ class Set extends AbstractObject
      */
     private $searchUri;
 
-
     /**
      * @return string
      */

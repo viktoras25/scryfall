@@ -1,25 +1,11 @@
 <?php
 
-namespace Viktoras\Scryfall\Client\Request;
+namespace Viktoras\Scryfall\Client\Request\Sets;
 
-use Viktoras\Scryfall\Enums;
+use Viktoras\Scryfall\Client\Request\AbstractRequest;
 
 class SetByCode extends AbstractRequest
 {
-    /**
-     * The data format to return. This method only supports json.
-     *
-     * @var string
-     */
-    private $format = Enums\Formats::JSON;
-
-    /**
-     * If true, the returned JSON will be prettified. Avoid using for production code.
-     *
-     * @var bool
-     */
-    private $pretty = Enums\Boolean::FALSE;
-
     /**
      * @var string
      */

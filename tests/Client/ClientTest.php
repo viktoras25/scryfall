@@ -3,7 +3,7 @@
 namespace Viktoras\Scryfall\Tests\Client;
 
 use PHPUnit\Framework\TestCase;
-use Viktoras\Scryfall\Client\Request\SetsList;
+use Viktoras\Scryfall\Client\Request\Sets\SetsList;
 
 class ClientTest extends TestCase
 {

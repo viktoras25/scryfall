@@ -8,11 +8,27 @@ use Viktoras\Scryfall\Exception\UnexpectedValueException;
 class ObjectFactory
 {
     /**
+     * @param string $json
+     *
+     * @return ObjectInterface
+     */
+    public function makeFromString(string $json): ObjectInterface
+    {
+        $data = json_decode($json, true);
+
+        if (!is_array($data)) {
+            $data = [];
+        }
+
+        return $this->makeFromArray($data);
+    }
+
+    /**
      * @param array $data
      *
      * @return ObjectInterface
      */
-    public function make(array $data): ObjectInterface
+    public function makeFromArray(array $data): ObjectInterface
     {
         if (!isset($data['object'])) {
             throw new InvalidArgumentException('Invalid data format');

@@ -49,7 +49,7 @@ class ListObject extends AbstractObject
         $objects = [];
 
         foreach ($this->data as $data) {
-            $objects[] = $objectFactory->make($data);
+            $objects[] = $objectFactory->makeFromArray($data);
         }
 
         return $objects;

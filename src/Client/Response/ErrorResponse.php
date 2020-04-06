@@ -3,27 +3,15 @@
 namespace Viktoras\Scryfall\Client\Response;
 
 use Viktoras\Scryfall\Entities\Error;
+use Viktoras\Scryfall\Entities\ObjectInterface;
 
 class ErrorResponse extends AbstractResponse
 {
     /**
-     * @var Error
-     */
-    private $error;
-
-    /**
-     * @param string $json
-     */
-    public function __construct(string $json)
-    {
-        $this->error = Error::fromJsonString($json);
-    }
-
-    /**
-     * @return Error
+     * @return Error|ObjectInterface
      */
     public function getError(): Error
     {
-        return $this->error;
+        return $this->getObject();
     }
 }

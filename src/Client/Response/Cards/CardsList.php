@@ -2,16 +2,20 @@
 
 namespace Viktoras\Scryfall\Client\Response\Cards;
 
-use Viktoras\Scryfall\Client\Response\AbstractListResponse;
+use Viktoras\Scryfall\Client\Response\AbstractResponse;
 use Viktoras\Scryfall\Entities\Card;
+use Viktoras\Scryfall\Entities\ListObject;
 
-class CardsList extends AbstractListResponse
+class CardsList extends AbstractResponse
 {
     /**
      * @return Card[]
      */
     public function getCards(): array
     {
-        return $this->list->getObjects();
+        /** @var ListObject $list */
+        $list = $this->getObject();
+
+        return $list->getObjects();
     }
 }

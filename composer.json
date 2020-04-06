@@ -24,6 +24,10 @@
         "phpunit/phpunit": "^7.5",
         "roave/security-advisories": "dev-master"
     },
+    "suggest": {
+        "php-http/curl-client": "A lightweight PSR-18 HTTP Client",
+        "nyholm/psr7": "A lightweight PSR-17 Factory implementation"
+    },
     "config": {
         "platform": {
             "php": "7.1"

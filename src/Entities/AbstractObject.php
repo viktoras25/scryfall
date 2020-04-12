@@ -42,7 +42,7 @@ abstract class AbstractObject implements ObjectInterface
         $instance = new static();
 
         foreach ($data as $key => $value) {
-            $methodName = 'set'. str_replace(' ', '', ucwords(str_replace('_', ' ', $key)));
+            $methodName = 'set' . str_replace(' ', '', ucwords(str_replace('_', ' ', $key)));
 
             if (method_exists($instance, $methodName)) {
                 $instance->$methodName($value);

@@ -33,8 +33,7 @@ class Client
      * @param ClientInterface         $client
      * @param RequestFactoryInterface $requestFactory
      */
-    public function __construct
-    (
+    public function __construct(
         $baseUrl,
         ClientInterface $client,
         RequestFactoryInterface $requestFactory

@@ -2,8 +2,6 @@
 
 namespace Viktoras\Scryfall\Client\Request\Traits;
 
-use Viktoras\Scryfall\Client\Request\RequestInterface;
-
 trait Paginatable
 {
     /**

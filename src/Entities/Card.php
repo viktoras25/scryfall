@@ -83,6 +83,11 @@ class Card extends AbstractObject
     private $set;
 
     /**
+     * @var int
+     */
+    private $collectorNumber;
+
+    /**
      * @return string
      */
     protected function acceptsObject(): string
@@ -312,5 +317,21 @@ class Card extends AbstractObject
     public function setSet(string $set): void
     {
         $this->set = $set;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCollectorNumber(): int
+    {
+        return $this->collectorNumber;
+    }
+
+    /**
+     * @param int $collectorNumber
+     */
+    public function setCollectorNumber(int $collectorNumber): void
+    {
+        $this->collectorNumber = $collectorNumber;
     }
 }

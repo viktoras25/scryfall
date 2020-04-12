@@ -21,6 +21,6 @@ class CardsBySet extends Search
     {
         $query = 'set:' . $setCode;
 
-        parent::__construct(urlencode($query));
+        parent::__construct($query);
     }
 }

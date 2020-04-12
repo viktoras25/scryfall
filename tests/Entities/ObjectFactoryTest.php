@@ -7,6 +7,7 @@ use Viktoras\Scryfall\Entities\Error;
 use Viktoras\Scryfall\Entities\ListObject;
 use Viktoras\Scryfall\Entities\ObjectFactory;
 use Viktoras\Scryfall\Exception\InvalidArgumentException;
+use Viktoras\Scryfall\Exception\UnexpectedValueException;
 
 class ObjectFactoryTest extends TestCase
 {
@@ -16,6 +17,22 @@ class ObjectFactoryTest extends TestCase
     private function getFactory(): ObjectFactory
     {
         return new ObjectFactory();
+    }
+
+    public function testMakeFromArrayInvalidFormat()
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('Invalid data format');
+
+        $this->getFactory()->makeFromArray([]);
+    }
+
+    public function testMakeFromArrayUnsupportedObject()
+    {
+        $this->expectException(UnexpectedValueException::class);
+        $this->expectExceptionMessage('Unsupported object');
+
+        $this->getFactory()->makeFromArray(['object' => 'sofa']);
     }
 
     public function testMakeFromArray()
@@ -53,7 +70,7 @@ class ObjectFactoryTest extends TestCase
 
     public function testMakeList()
     {
-        $array = ['object'  => 'list'];
+        $array = ['object' => 'list'];
 
         $error = $this->getFactory()->makeFromArray($array);
 

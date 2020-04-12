@@ -58,7 +58,7 @@ class ListObject extends AbstractObject
     /**
      * @return array
      */
-    public function getData()
+    public function getData(): array
     {
         return $this->data;
     }
@@ -66,7 +66,7 @@ class ListObject extends AbstractObject
     /**
      * @param array $data
      */
-    public function setData($data)
+    public function setData($data): void
     {
         $this->data = $data;
     }
@@ -74,7 +74,7 @@ class ListObject extends AbstractObject
     /**
      * @return bool
      */
-    public function hasMore()
+    public function hasMore(): bool
     {
         return $this->hasMore;
     }
@@ -82,7 +82,7 @@ class ListObject extends AbstractObject
     /**
      * @param bool $hasMore
      */
-    public function setHasMore($hasMore)
+    public function setHasMore($hasMore): void
     {
         $this->hasMore = $hasMore;
     }
@@ -90,7 +90,7 @@ class ListObject extends AbstractObject
     /**
      * @return string|null
      */
-    public function getNextPage()
+    public function getNextPage(): ?string
     {
         return $this->nextPage;
     }
@@ -98,7 +98,7 @@ class ListObject extends AbstractObject
     /**
      * @param string|null $nextPage
      */
-    public function setNextPage($nextPage)
+    public function setNextPage($nextPage): void
     {
         $this->nextPage = $nextPage;
     }
@@ -106,7 +106,7 @@ class ListObject extends AbstractObject
     /**
      * @return string|null
      */
-    public function getTotalCards()
+    public function getTotalCards(): ?string
     {
         return $this->totalCards;
     }
@@ -114,7 +114,7 @@ class ListObject extends AbstractObject
     /**
      * @param string|null $totalCards
      */
-    public function setTotalCards($totalCards)
+    public function setTotalCards($totalCards): void
     {
         $this->totalCards = $totalCards;
     }
@@ -122,7 +122,7 @@ class ListObject extends AbstractObject
     /**
      * @return array
      */
-    public function getWarnings()
+    public function getWarnings(): array
     {
         return $this->warnings;
     }
@@ -130,7 +130,7 @@ class ListObject extends AbstractObject
     /**
      * @param array $warnings
      */
-    public function setWarnings($warnings)
+    public function setWarnings($warnings): void
     {
         $this->warnings = $warnings;
     }

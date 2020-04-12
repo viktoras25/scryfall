@@ -22,7 +22,7 @@ class Catalog extends AbstractObject
     private $totalValues;
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function acceptsObject(): string
     {

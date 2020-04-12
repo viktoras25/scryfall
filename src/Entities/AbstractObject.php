@@ -12,7 +12,7 @@ abstract class AbstractObject implements ObjectInterface
     abstract protected function acceptsObject(): string;
 
     /**
-     * Prevent from overriding constructor
+     * Prevent from overriding constructor.
      */
     final public function __construct()
     {

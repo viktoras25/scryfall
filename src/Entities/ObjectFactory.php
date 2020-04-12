@@ -9,7 +9,7 @@ class ObjectFactory
 {
     /**
      * Some objects conflict with PHP reserved names, use this custom mapping
-     * for alternative names
+     * for alternative names.
      */
     private const CLASS_MAPPING = [
         'list' => ListObject::class

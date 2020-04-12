@@ -2,8 +2,8 @@
 
 namespace Viktoras\Scryfall\Entities;
 
-use Viktoras\Scryfall\Enums;
 use DateTimeInterface;
+use Viktoras\Scryfall\Enums;
 
 class Set extends AbstractObject
 {

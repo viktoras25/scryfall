@@ -17,7 +17,7 @@ abstract class AbstractRequest implements RequestInterface
     protected $format = Enums\ResponseFormats::JSON;
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getMethod(): string
     {
@@ -25,7 +25,7 @@ abstract class AbstractRequest implements RequestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getQuery(): string
     {
@@ -33,7 +33,7 @@ abstract class AbstractRequest implements RequestInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getBody(): string
     {

@@ -32,7 +32,7 @@ class ListObject extends AbstractObject
     private $warnings;
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     protected function acceptsObject(): string
     {

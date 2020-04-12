@@ -11,7 +11,7 @@ class SetById extends AbstractResponse
     /**
      * @return Set|ObjectInterface
      */
-    public function getSet(): Set
+    public function getSet()
     {
         return $this->getObject();
     }

@@ -3,9 +3,12 @@
 namespace Viktoras\Scryfall\Client\Request\Cards;
 
 use Viktoras\Scryfall\Client\Request\AbstractRequest;
+use Viktoras\Scryfall\Client\Request\Traits\Paginatable;
 
 class Search extends AbstractRequest
 {
+    use Paginatable;
+
     /** Sorting direction */
     public const SORTING_DIRECTION_AUTO = 'auto';
     public const SORTING_DIRECTION_ASC  = 'asc';
@@ -16,11 +19,6 @@ class Search extends AbstractRequest
     public const SORTING_ORDER_CMC    = 'cmc';
     public const SORTING_ORDER_SET    = 'set';
     public const SORTING_ORDER_RARITY = 'rarity';
-
-    /**
-     * @var int
-     */
-    protected $page = 1;
 
     /**
      * @var string
@@ -55,9 +53,9 @@ class Search extends AbstractRequest
                     'q'      => $this->query,
                     'order'  => $this->order,
                     'dir'    => $this->dir,
-                    'page'   => $this->page,
+                    'page'   => $this->getPage(),
                     'format' => $this->format,
-                    'pretty' => $this->pretty
+                    'pretty' => $this->isPretty()
                 ]
             );
     }

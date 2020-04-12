@@ -3,13 +3,11 @@
 namespace Viktoras\Scryfall\Client\Request\Cards;
 
 use Viktoras\Scryfall\Client\Request\AbstractRequest;
+use Viktoras\Scryfall\Client\Request\Traits\Paginatable;
 
 class CardsList extends AbstractRequest
 {
-    /**
-     * @var int
-     */
-    private $page = 1;
+    use Paginatable;
 
     /**
      * @return string
@@ -18,9 +16,9 @@ class CardsList extends AbstractRequest
     {
         return 'cards?' . http_build_query(
                 [
-                    'page'   => $this->page,
+                    'page'   => $this->getPage(),
                     'format' => $this->format,
-                    'pretty' => $this->pretty
+                    'pretty' => $this->isPretty()
                 ]
             );
     }

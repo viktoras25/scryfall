@@ -45,7 +45,7 @@ class ObjectFactory
         // Load class name from map or generate one
         $type = self::CLASS_MAPPING[$data['object']] ?? __NAMESPACE__ . '\\' . ucfirst($data['object']);
 
-        if (!class_exists($type) || !class_implements($type, ObjectInterface::class)) {
+        if (!class_exists($type) || !in_array(ObjectInterface::class, class_implements($type), true)) {
             throw new UnexpectedValueException('Unsupported object');
         }
 

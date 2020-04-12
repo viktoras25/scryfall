@@ -42,7 +42,7 @@ class ListObject extends AbstractObject
     /**
      * @return ObjectInterface[]
      */
-    public function getObjects(): array
+    public function getObjects()
     {
         $objectFactory = new ObjectFactory();
 

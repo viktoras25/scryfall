@@ -27,7 +27,7 @@ class SetByCode extends AbstractRequest
         $queryString = http_build_query(
             [
                 'format' => $this->format,
-                'pretty' => $this->pretty
+                'pretty' => $this->isPretty()
             ]
         );
 

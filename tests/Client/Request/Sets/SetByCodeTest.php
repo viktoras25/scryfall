@@ -12,8 +12,8 @@ class SetByCodeTest extends TestCase
         $request = new SetByCode('IKO');
 
         $this->assertSame(
-            $request->getQuery(),
-            'sets/IKO?format=json&pretty=false'
+            'sets/IKO?format=json&pretty=false',
+            $request->getQuery()
         );
     }
 }

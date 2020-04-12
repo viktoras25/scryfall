@@ -10,7 +10,7 @@ class ErrorResponse extends AbstractResponse
     /**
      * @return Error|ObjectInterface
      */
-    public function getError(): Error
+    public function getError()
     {
         return $this->getObject();
     }

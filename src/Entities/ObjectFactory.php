@@ -8,6 +8,14 @@ use Viktoras\Scryfall\Exception\UnexpectedValueException;
 class ObjectFactory
 {
     /**
+     * Some objects conflict with PHP reserved names, use this custom mapping
+     * for alternative names
+     */
+    private const CLASS_MAPPING = [
+        'list' => ListObject::class
+    ];
+
+    /**
      * @param string $json
      *
      * @return ObjectInterface
@@ -34,10 +42,10 @@ class ObjectFactory
             throw new InvalidArgumentException('Invalid data format');
         }
 
-        /** @var ObjectInterface $type */
-        $type = __NAMESPACE__ . '\\' . ucfirst($data['object']);
+        // Load class name from map or generate one
+        $type = self::CLASS_MAPPING[$data['object']] ?? __NAMESPACE__ . '\\' . ucfirst($data['object']);
 
-        if (!class_implements($type, ObjectInterface::class)) {
+        if (!class_exists($type) || !class_implements($type, ObjectInterface::class)) {
             throw new UnexpectedValueException('Unsupported object');
         }
 

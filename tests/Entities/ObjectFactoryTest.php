@@ -4,6 +4,7 @@ namespace Viktoras\Scryfall\Tests\Entities;
 
 use PHPUnit\Framework\TestCase;
 use Viktoras\Scryfall\Entities\Error;
+use Viktoras\Scryfall\Entities\ListObject;
 use Viktoras\Scryfall\Entities\ObjectFactory;
 use Viktoras\Scryfall\Exception\InvalidArgumentException;
 
@@ -48,5 +49,14 @@ class ObjectFactoryTest extends TestCase
         $error = $this->getFactory()->makeFromString(file_get_contents(__FILE__));
 
         $this->assertInstanceOf(Error::class, $error);
+    }
+
+    public function testMakeList()
+    {
+        $array = ['object'  => 'list'];
+
+        $error = $this->getFactory()->makeFromArray($array);
+
+        $this->assertInstanceOf(ListObject::class, $error);
     }
 }

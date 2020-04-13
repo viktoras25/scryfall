@@ -88,6 +88,11 @@ class Card extends AbstractObject
     private $collectorNumber;
 
     /**
+     * @var array
+     */
+    private $imageUris;
+
+    /**
      * @return string
      */
     protected function acceptsObject(): string
@@ -96,9 +101,9 @@ class Card extends AbstractObject
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getArenaId(): int
+    public function getArenaId(): ?int
     {
         return $this->arenaId;
     }
@@ -192,9 +197,9 @@ class Card extends AbstractObject
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getLoyalty(): string
+    public function getLoyalty(): ?string
     {
         return $this->loyalty;
     }
@@ -333,5 +338,21 @@ class Card extends AbstractObject
     public function setCollectorNumber(int $collectorNumber): void
     {
         $this->collectorNumber = $collectorNumber;
+    }
+
+    /**
+     * @return array
+     */
+    public function getImageUris(): array
+    {
+        return $this->imageUris;
+    }
+
+    /**
+     * @param array $imageUris
+     */
+    public function setImageUris(array $imageUris): void
+    {
+        $this->imageUris = $imageUris;
     }
 }

@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Viktoras Bezaras",
-            "email": "mail@viktoras.de"
+            "email": "viktoras.bezaras@gmail.com"
         }
     ],
     "autoload": {
@@ -15,16 +15,16 @@
         }
     },
     "require": {
-        "php": "^7.1",
+        "php": "^7.1||^8.0",
         "psr/http-client": "^1.0",
         "psr/http-factory": "^1.0",
         "ext-json": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.5",
-        "phpstan/phpstan": "^0.12",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "roave/security-advisories": "dev-master"
+        "phpunit/phpunit": "^7||^8||^9",
+        "phpstan/phpstan": "^1",
+        "friendsofphp/php-cs-fixer": "^3",
+        "roave/security-advisories": "dev-latest"
     },
     "suggest": {
         "php-http/curl-client": "A lightweight PSR-18 HTTP Client",
@@ -38,6 +38,6 @@
     "scripts": {
         "test": "./vendor/bin/phpunit tests",
         "stan": "./vendor/bin/phpstan analyse --level=5 src",
-        "phpcs": "./vendor/bin/php-cs-fixer fix --using-cache no --config .php_cs src"
+        "phpcs": "./vendor/bin/php-cs-fixer fix --using-cache no --config .php-cs-fixer.php src"
     }
 }

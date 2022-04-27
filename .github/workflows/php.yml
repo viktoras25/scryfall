@@ -1,4 +1,4 @@
-name: PHP Composer
+name: CI
 
 on:
   push:
@@ -8,10 +8,34 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - operating-system: 'ubuntu-18.04'
+            php-version: '7.1'
+
+          - operating-system: 'ubuntu-20.04'
+            php-version: '7.4'
+
+          - operating-system: 'ubuntu-20.04'
+            php-version: '8.0'
+
+    name: PHP ${{ matrix.php-version }}
+
+    runs-on: ${{ matrix.operating-system }}
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Choose PHP Version
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-version }}
+      env:
+        fail-fast: false # disabled as old PHP version cannot run flex
+        update: ${{ matrix.php-version == '8.0' }} # force update to 8.0.1+, ref https://github.com/shivammathur/setup-php/issues/394#issuecomment-760461251
 
     - name: Validate composer.json and composer.lock
       run: composer validate

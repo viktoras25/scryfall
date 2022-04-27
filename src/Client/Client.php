@@ -71,6 +71,7 @@ class Client
             return new GenericResponse($body);
         }
 
+        /** @var ResponseInterface */
         return new $responseClass($body);
     }
 }

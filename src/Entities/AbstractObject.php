@@ -49,7 +49,7 @@ abstract class AbstractObject implements ObjectInterface
     {
         $data = json_decode($json, true);
 
-        if (!isset($data['object']) || $data['object'] !== $this->acceptsObject()) {
+        if (!is_array($data) || !isset($data['object']) || $data['object'] !== $this->acceptsObject()) {
             throw new InvalidArgumentException('Invalid object');
         }
 

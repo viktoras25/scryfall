@@ -24,7 +24,8 @@
         "phpunit/phpunit": "^7||^8||^9",
         "phpstan/phpstan": "^1",
         "friendsofphp/php-cs-fixer": "^3",
-        "roave/security-advisories": "dev-latest"
+        "roave/security-advisories": "dev-latest",
+        "vimeo/psalm": "^4.22"
     },
     "suggest": {
         "php-http/curl-client": "A lightweight PSR-18 HTTP Client",
@@ -38,6 +39,7 @@
     "scripts": {
         "test": "./vendor/bin/phpunit tests",
         "stan": "./vendor/bin/phpstan analyse --level=5 src",
+        "psalm": "./vendor/bin/psalm",
         "phpcs": "./vendor/bin/php-cs-fixer fix --using-cache no --config .php-cs-fixer.php"
     }
 }

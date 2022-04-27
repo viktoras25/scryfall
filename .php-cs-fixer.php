@@ -11,6 +11,7 @@ return (new PhpCsFixer\Config())
             '@Symfony'                              => true,
 
             // Change Symfony parameters
+            'phpdoc_to_comment'                     => false,
             'binary_operator_spaces'                => ['default' => 'align'],
             'concat_space'                          => ['spacing' => 'one'],
             'no_trailing_comma_in_singleline_array' => true,

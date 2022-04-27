@@ -29,49 +29,31 @@ class Catalog extends AbstractObject
         return Objects::CATALOG;
     }
 
-    /**
-     * @return array
-     */
     public function getData(): array
     {
         return $this->data;
     }
 
-    /**
-     * @param array $data
-     */
     public function setData(array $data): void
     {
         $this->data = $data;
     }
 
-    /**
-     * @return string
-     */
     public function getUri(): string
     {
         return $this->uri;
     }
 
-    /**
-     * @param string $uri
-     */
     public function setUri(string $uri): void
     {
         $this->uri = $uri;
     }
 
-    /**
-     * @return int
-     */
     public function getTotalValues(): int
     {
         return $this->totalValues;
     }
 
-    /**
-     * @param int $totalValues
-     */
     public function setTotalValues(int $totalValues): void
     {
         $this->totalValues = $totalValues;

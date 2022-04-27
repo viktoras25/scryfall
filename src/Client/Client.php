@@ -29,9 +29,7 @@ class Client
     private $baseUrl;
 
     /**
-     * @param string                  $baseUrl
-     * @param ClientInterface         $client
-     * @param RequestFactoryInterface $requestFactory
+     * @param string $baseUrl
      */
     public function __construct(
         $baseUrl,
@@ -43,11 +41,6 @@ class Client
         $this->requestFactory = $requestFactory;
     }
 
-    /**
-     * @param RequestInterface $request
-     *
-     * @return HttpRequestInterface
-     */
     private function createHttpRequest(RequestInterface $request): HttpRequestInterface
     {
         return $this->requestFactory->createRequest(
@@ -57,10 +50,6 @@ class Client
     }
 
     /**
-     * @param RequestInterface $request
-     *
-     * @return ResponseInterface
-     *
      * @throws ClientExceptionInterface
      */
     public function request(RequestInterface $request): ResponseInterface

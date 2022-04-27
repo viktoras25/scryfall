@@ -55,9 +55,6 @@ class ListObject extends AbstractObject
         return $objects;
     }
 
-    /**
-     * @return array
-     */
     public function getData(): array
     {
         return $this->data;
@@ -71,9 +68,6 @@ class ListObject extends AbstractObject
         $this->data = $data;
     }
 
-    /**
-     * @return bool
-     */
     public function hasMore(): bool
     {
         return $this->hasMore;
@@ -87,9 +81,6 @@ class ListObject extends AbstractObject
         $this->hasMore = $hasMore;
     }
 
-    /**
-     * @return string|null
-     */
     public function getNextPage(): ?string
     {
         return $this->nextPage;
@@ -103,9 +94,6 @@ class ListObject extends AbstractObject
         $this->nextPage = $nextPage;
     }
 
-    /**
-     * @return string|null
-     */
     public function getTotalCards(): ?string
     {
         return $this->totalCards;
@@ -119,9 +107,6 @@ class ListObject extends AbstractObject
         $this->totalCards = $totalCards;
     }
 
-    /**
-     * @return array
-     */
     public function getWarnings(): array
     {
         return $this->warnings;

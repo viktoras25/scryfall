@@ -6,9 +6,6 @@ use Viktoras\Scryfall\Client\Request\AbstractRequest;
 
 class Powers extends AbstractRequest
 {
-    /**
-     * @return string
-     */
     public function getQuery(): string
     {
         return 'catalog/powers?' . http_build_query(

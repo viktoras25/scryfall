@@ -6,9 +6,6 @@ use Viktoras\Scryfall\Exception\InvalidArgumentException;
 
 abstract class AbstractObject implements ObjectInterface
 {
-    /**
-     * @return string
-     */
     abstract protected function acceptsObject(): string;
 
     /**
@@ -19,8 +16,6 @@ abstract class AbstractObject implements ObjectInterface
     }
 
     /**
-     * @param string $json
-     *
      * @return ObjectInterface|static
      *
      * @throws InvalidArgumentException
@@ -32,11 +27,6 @@ abstract class AbstractObject implements ObjectInterface
         return static::fromArray($instance->validateInput($json));
     }
 
-    /**
-     * @param array $data
-     *
-     * @return ObjectInterface
-     */
     public static function fromArray(array $data): ObjectInterface
     {
         $instance = new static();
@@ -53,8 +43,6 @@ abstract class AbstractObject implements ObjectInterface
     }
 
     /**
-     * @param string $json
-     *
      * @return array JSON decoded into array
      */
     public function validateInput(string $json): array

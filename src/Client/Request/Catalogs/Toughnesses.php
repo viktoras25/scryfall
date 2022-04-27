@@ -6,9 +6,6 @@ use Viktoras\Scryfall\Client\Request\AbstractRequest;
 
 class Toughnesses extends AbstractRequest
 {
-    /**
-     * @return string
-     */
     public function getQuery(): string
     {
         return 'catalog/toughnesses?' . http_build_query(

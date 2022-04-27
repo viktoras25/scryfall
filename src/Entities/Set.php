@@ -87,9 +87,6 @@ class Set extends AbstractObject
      */
     private $searchUri;
 
-    /**
-     * @return string
-     */
     protected function acceptsObject(): string
     {
         return Enums\Objects::SET;

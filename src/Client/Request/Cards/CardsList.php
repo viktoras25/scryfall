@@ -9,9 +9,6 @@ class CardsList extends AbstractRequest
 {
     use Paginatable;
 
-    /**
-     * @return string
-     */
     public function getQuery(): string
     {
         return 'cards?' . http_build_query(

@@ -11,17 +11,11 @@ class SetByCode extends AbstractRequest
      */
     private $code;
 
-    /**
-     * @param string $code
-     */
     public function __construct(string $code)
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string
-     */
     public function getQuery(): string
     {
         $queryString = http_build_query(

@@ -92,73 +92,46 @@ class Card extends AbstractObject
      */
     private $imageUris;
 
-    /**
-     * @return string
-     */
     protected function acceptsObject(): string
     {
         return Enums\Objects::CARD;
     }
 
-    /**
-     * @return int|null
-     */
     public function getArenaId(): ?int
     {
         return $this->arenaId;
     }
 
-    /**
-     * @param int $arenaId
-     */
     public function setArenaId(int $arenaId): void
     {
         $this->arenaId = $arenaId;
     }
 
-    /**
-     * @return string
-     */
     public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $id
-     */
     public function setId(string $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
     public function getLang(): string
     {
         return $this->lang;
     }
 
-    /**
-     * @param string $lang
-     */
     public function setLang(string $lang): void
     {
         $this->lang = $lang;
     }
 
-    /**
-     * @return float
-     */
     public function getCmc(): float
     {
         return $this->cmc;
     }
 
-    /**
-     * @param float $cmc
-     */
     public function setCmc(float $cmc): void
     {
         $this->cmc = $cmc;
@@ -180,177 +153,111 @@ class Card extends AbstractObject
         $this->colors = $colors;
     }
 
-    /**
-     * @return array
-     */
     public function getLegalities(): array
     {
         return $this->legalities;
     }
 
-    /**
-     * @param array $legalities
-     */
     public function setLegalities(array $legalities): void
     {
         $this->legalities = $legalities;
     }
 
-    /**
-     * @return string|null
-     */
     public function getLoyalty(): ?string
     {
         return $this->loyalty;
     }
 
-    /**
-     * @param string $loyalty
-     */
     public function setLoyalty(string $loyalty): void
     {
         $this->loyalty = $loyalty;
     }
 
-    /**
-     * @return string
-     */
     public function getManaCost(): string
     {
         return $this->manaCost;
     }
 
-    /**
-     * @param string $manaCost
-     */
     public function setManaCost(string $manaCost): void
     {
         $this->manaCost = $manaCost;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getOracleText(): string
     {
         return $this->oracleText;
     }
 
-    /**
-     * @param string $oracleText
-     */
     public function setOracleText(string $oracleText): void
     {
         $this->oracleText = $oracleText;
     }
 
-    /**
-     * @return string
-     */
     public function getPower(): string
     {
         return $this->power;
     }
 
-    /**
-     * @param string $power
-     */
     public function setPower(string $power): void
     {
         $this->power = $power;
     }
 
-    /**
-     * @return string
-     */
     public function getToughness(): string
     {
         return $this->toughness;
     }
 
-    /**
-     * @param string $toughness
-     */
     public function setToughness(string $toughness): void
     {
         $this->toughness = $toughness;
     }
 
-    /**
-     * @return string
-     */
     public function getArtist(): string
     {
         return $this->artist;
     }
 
-    /**
-     * @param string $artist
-     */
     public function setArtist(string $artist): void
     {
         $this->artist = $artist;
     }
 
-    /**
-     * @return string
-     */
     public function getSet(): string
     {
         return $this->set;
     }
 
-    /**
-     * @param string $set
-     */
     public function setSet(string $set): void
     {
         $this->set = $set;
     }
 
-    /**
-     * @return int
-     */
     public function getCollectorNumber(): int
     {
         return $this->collectorNumber;
     }
 
-    /**
-     * @param int $collectorNumber
-     */
     public function setCollectorNumber(int $collectorNumber): void
     {
         $this->collectorNumber = $collectorNumber;
     }
 
-    /**
-     * @return array
-     */
     public function getImageUris(): array
     {
         return $this->imageUris;
     }
 
-    /**
-     * @param array $imageUris
-     */
     public function setImageUris(array $imageUris): void
     {
         $this->imageUris = $imageUris;

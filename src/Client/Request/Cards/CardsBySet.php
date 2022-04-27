@@ -14,9 +14,6 @@ class CardsBySet extends Search
      */
     protected $dir = self::SORTING_DIRECTION_ASC;
 
-    /**
-     * @param string $setCode
-     */
     public function __construct(string $setCode)
     {
         $query = 'set:' . $setCode;

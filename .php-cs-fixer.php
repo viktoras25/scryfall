@@ -7,10 +7,10 @@ return (new PhpCsFixer\Config())
     ->setRules(
         [
             '@PSR2'                                 => true,
+            '@PSR12'                                => true,
             '@Symfony'                              => true,
 
             // Change Symfony parameters
-            'no_superfluous_phpdoc_tags'            => false,
             'binary_operator_spaces'                => ['default' => 'align'],
             'concat_space'                          => ['spacing' => 'one'],
             'no_trailing_comma_in_singleline_array' => true,

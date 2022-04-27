@@ -6,9 +6,6 @@ use Viktoras\Scryfall\Client\Request\AbstractRequest;
 
 class PlaneswalkerTypes extends AbstractRequest
 {
-    /**
-     * @return string
-     */
     public function getQuery(): string
     {
         return 'catalog/planeswalker-types?' . http_build_query(

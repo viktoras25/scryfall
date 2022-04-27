@@ -15,11 +15,6 @@ class ObjectFactory
         'list' => ListObject::class
     ];
 
-    /**
-     * @param string $json
-     *
-     * @return ObjectInterface
-     */
     public function makeFromString(string $json): ObjectInterface
     {
         $data = json_decode($json, true);
@@ -31,11 +26,6 @@ class ObjectFactory
         return $this->makeFromArray($data);
     }
 
-    /**
-     * @param array $data
-     *
-     * @return ObjectInterface
-     */
     public function makeFromArray(array $data): ObjectInterface
     {
         if (!isset($data['object'])) {

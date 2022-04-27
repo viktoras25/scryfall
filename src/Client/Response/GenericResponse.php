@@ -9,9 +9,6 @@ class GenericResponse extends AbstractResponse
      */
     private $json;
 
-    /**
-     * @param string $json
-     */
     public function __construct(string $json)
     {
         parent::__construct($json);
@@ -19,9 +16,6 @@ class GenericResponse extends AbstractResponse
         $this->json = $json;
     }
 
-    /**
-     * @return string
-     */
     public function getRawResponse(): string
     {
         return $this->json;

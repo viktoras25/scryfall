@@ -35,17 +35,11 @@ class Search extends AbstractRequest
      */
     protected $query;
 
-    /**
-     * @param string $query
-     */
     public function __construct(string $query)
     {
         $this->query = $query;
     }
 
-    /**
-     * @return string
-     */
     public function getQuery(): string
     {
         return 'cards/search?' . http_build_query(

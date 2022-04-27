@@ -92,258 +92,162 @@ class Set extends AbstractObject
         return Enums\Objects::SET;
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $id
-     */
-    public function setId($id)
+    public function setId(string $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
-    public function getCode()
+    public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
-    public function setCode($code)
+    public function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getMtgoCode()
+    public function getMtgoCode(): ?string
     {
         return $this->mtgoCode;
     }
 
-    /**
-     * @param string|null $mtgoCode
-     */
-    public function setMtgoCode($mtgoCode)
+    public function setMtgoCode(?string $mtgoCode): void
     {
         $this->mtgoCode = $mtgoCode;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getTcglayerId()
+    public function getTcglayerId(): ?string
     {
         return $this->tcgplayerId;
     }
 
-    /**
-     * @param string|null $tcgplayerId
-     */
-    public function setTcgplayerId($tcgplayerId)
+    public function setTcgplayerId(?string $tcgplayerId): void
     {
         $this->tcgplayerId = $tcgplayerId;
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
-    public function setName($name)
+    public function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
-    public function getSetType()
+    public function getSetType(): string
     {
         return $this->setType;
     }
 
-    /**
-     * @param string $setType
-     */
-    public function setSetType($setType)
+    public function setSetType(string $setType): void
     {
         $this->setType = $setType;
     }
 
-    /**
-     * @return DateTimeInterface|null
-     */
-    public function getReleasedAt()
+    public function getReleasedAt(): ?DateTimeInterface
     {
         return $this->releasedAt;
     }
 
-    /**
-     * @param DateTimeInterface|null $releasedAt
-     */
-    public function setReleasedAt($releasedAt)
+    public function setReleasedAt(?DateTimeInterface $releasedAt): void
     {
         $this->releasedAt = $releasedAt;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getBlockCode()
+    public function getBlockCode(): ?string
     {
         return $this->blockCode;
     }
 
-    /**
-     * @param string|null $blockCode
-     */
-    public function setBlockCode($blockCode)
+    public function setBlockCode(?string $blockCode): void
     {
         $this->blockCode = $blockCode;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getParentSetCode()
+    public function getParentSetCode(): ?string
     {
         return $this->parentSetCode;
     }
 
-    /**
-     * @param string|null $parentSetCode
-     */
-    public function setParentSetCode($parentSetCode)
+    public function setParentSetCode(?string $parentSetCode): void
     {
         $this->parentSetCode = $parentSetCode;
     }
 
-    /**
-     * @return int
-     */
-    public function getCardCount()
+    public function getCardCount(): int
     {
         return $this->cardCount;
     }
 
-    /**
-     * @param int $cardCount
-     */
-    public function setCardCount($cardCount)
+    public function setCardCount(int $cardCount): void
     {
         $this->cardCount = $cardCount;
     }
 
-    /**
-     * @return bool
-     */
-    public function isDigital()
+    public function isDigital(): bool
     {
         return $this->digital;
     }
 
-    /**
-     * @param bool $digital
-     */
-    public function setDigital($digital)
+    public function setDigital(bool $digital): void
     {
         $this->digital = $digital;
     }
 
-    /**
-     * @return bool
-     */
-    public function isFoilOnly()
+    public function isFoilOnly(): bool
     {
         return $this->foilOnly;
     }
 
-    /**
-     * @param bool $foilOnly
-     */
-    public function setFoilOnly($foilOnly)
+    public function setFoilOnly(bool $foilOnly): void
     {
         $this->foilOnly = $foilOnly;
     }
 
-    /**
-     * @return string
-     */
-    public function getScryfallUri()
+    public function getScryfallUri(): string
     {
         return $this->scryfallUri;
     }
 
-    /**
-     * @param string $scryfallUri
-     */
-    public function setScryfallUri($scryfallUri)
+    public function setScryfallUri(string $scryfallUri): void
     {
         $this->scryfallUri = $scryfallUri;
     }
 
-    /**
-     * @return string
-     */
-    public function getUri()
+    public function getUri(): string
     {
         return $this->uri;
     }
 
-    /**
-     * @param string $uri
-     */
-    public function setUri($uri)
+    public function setUri(string $uri): void
     {
         $this->uri = $uri;
     }
 
-    /**
-     * @return string
-     */
-    public function getIconSvgUri()
+    public function getIconSvgUri(): string
     {
         return $this->iconSvgUri;
     }
 
-    /**
-     * @param string $iconSvgUri
-     */
-    public function setIconSvgUri($iconSvgUri)
+    public function setIconSvgUri(string $iconSvgUri): void
     {
         $this->iconSvgUri = $iconSvgUri;
     }
 
-    /**
-     * @return string
-     */
-    public function getSearchUri()
+    public function getSearchUri(): string
     {
         return $this->searchUri;
     }
 
-    /**
-     * @param string $searchUri
-     */
-    public function setSearchUri($searchUri)
+    public function setSearchUri(string $searchUri): void
     {
         $this->searchUri = $searchUri;
     }

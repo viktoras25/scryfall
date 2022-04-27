@@ -28,11 +28,8 @@ class Client
      */
     private $baseUrl;
 
-    /**
-     * @param string $baseUrl
-     */
     public function __construct(
-        $baseUrl,
+        string $baseUrl,
         ClientInterface $client,
         RequestFactoryInterface $requestFactory
     ) {

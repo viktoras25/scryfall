@@ -42,7 +42,7 @@ class ListObject extends AbstractObject
     /**
      * @return ObjectInterface[]
      */
-    public function getObjects()
+    public function getObjects(): array
     {
         $objectFactory = new ObjectFactory();
 
@@ -60,10 +60,7 @@ class ListObject extends AbstractObject
         return $this->data;
     }
 
-    /**
-     * @param array $data
-     */
-    public function setData($data): void
+    public function setData(array $data): void
     {
         $this->data = $data;
     }
@@ -73,10 +70,7 @@ class ListObject extends AbstractObject
         return $this->hasMore;
     }
 
-    /**
-     * @param bool $hasMore
-     */
-    public function setHasMore($hasMore): void
+    public function setHasMore(bool $hasMore): void
     {
         $this->hasMore = $hasMore;
     }
@@ -86,10 +80,7 @@ class ListObject extends AbstractObject
         return $this->nextPage;
     }
 
-    /**
-     * @param string|null $nextPage
-     */
-    public function setNextPage($nextPage): void
+    public function setNextPage(?string $nextPage): void
     {
         $this->nextPage = $nextPage;
     }
@@ -99,10 +90,7 @@ class ListObject extends AbstractObject
         return $this->totalCards;
     }
 
-    /**
-     * @param string|null $totalCards
-     */
-    public function setTotalCards($totalCards): void
+    public function setTotalCards(?string $totalCards): void
     {
         $this->totalCards = $totalCards;
     }
@@ -112,10 +100,7 @@ class ListObject extends AbstractObject
         return $this->warnings;
     }
 
-    /**
-     * @param array $warnings
-     */
-    public function setWarnings($warnings): void
+    public function setWarnings(array $warnings): void
     {
         $this->warnings = $warnings;
     }
